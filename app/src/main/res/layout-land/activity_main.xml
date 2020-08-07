@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity">
 
 
@@ -26,83 +25,78 @@
 
     <CheckBox
         android:id="@+id/numbersCheckBox"
-        android:layout_width="312dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Цифры"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <CheckBox
         android:id="@+id/lowercaseCheckBox"
-        android:layout_width="312dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Строчные буквы"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numbersCheckBox" />
 
     <CheckBox
         android:id="@+id/uppercaseCheckBox"
-        android:layout_width="314dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Прописные буквы"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lowercaseCheckBox" />
 
     <CheckBox
         android:id="@+id/specialSymbolsCheckBox"
-        android:layout_width="318dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Спец. символы %, *, ),?, @, #, $, ~"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uppercaseCheckBox" />
 
     <EditText
         android:id="@+id/passwordLengthEditText"
-        android:layout_width="316dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:fontFamily="@font/roboto_slab"
         android:hint="Длина пароля"
         android:inputType="number"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/specialSymbolsCheckBox" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/passwordsAmountEditText"
-        android:layout_width="323dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="266dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:fontFamily="@font/roboto_slab"
         android:hint="Сколько паролей  сгенерировать"
         android:inputType="number"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLengthEditText" />
 
@@ -110,49 +104,36 @@
         android:id="@+id/topDivider"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="29dp"
         android:background="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/generatePasswordsButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordsAmountEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/generatePasswordsButton" />
 
     <TextView
         android:id="@+id/generatedPasswordsTextView"
-        android:layout_width="413dp"
-        android:layout_height="266dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
-        android:padding="15dp"
         android:hint="СГЕНЕРИРОВАННЫЕ ПАРОЛИ:"
+        android:padding="15dp"
+        android:textIsSelectable="true"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textIsSelectable="true"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottomDivider" />
-
-    <View
-        android:id="@+id/bottomDivider"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordsAmountEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/topDivider" />
 
     <Button
         android:id="@+id/generatePasswordsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="64dp"
         android:text="СОЗДАТЬ ПАРОЛИ"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/passwordsAmountEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
